@@ -1,0 +1,95 @@
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  background-color: #fefefe;
+  margin: 100px auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+}
+
+@media only screen and (max-width: 800px) {
+  .modal__content {
+    width: 320px;
+  }
+}
+
+@keyframes animatetop {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  60% {
+    top: 100px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add_theme {
+  background-color: #24af6a;
+}
+
+.info_theme {
+  background-color: rgb(77, 139, 197);
+}
+
+.edit_theme {
+  background-color: #b7d85c;
+}
+
+.modal__content_header {
+  padding: 10px 16px;
+}
+
+.modal__content_header h2 {
+  font-weight: 500;
+}
+
+.modal__content_body {
+  padding: 2px 16px;
+}
+
+.modal__content_footer {
+  padding: 2px 16px;
+  background-color: #fff;
+  color: #fff;
+}
+
+.modal__content_footer_buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 5px 0;
+}

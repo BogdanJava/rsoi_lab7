@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/forms.css">
+    <link rel="stylesheet" href="style/notification.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/all.css">
+
+    <!-- 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
+    -->
+    <title>Title</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="header__img_container">
+            <img src="assets/img/office.jpg" alt="office">
+        </div>
+        <div class="header__text">
+            <div class="header__text_text">
+                <h3>Office service</h3>
+                <p>The best company's database for you</p>
+            </div>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <div class="flex-container">
+            <div class="buttons">
+                <button type="button" class="btn btn-blue" id="moveSurnamesButton">
+                    Move surnames
+                </button>
+                <button type="button" class="btn btn-blue" id="addPrefixButton">
+                    Add prefixes
+                </button>
+                <button type="button" class="btn btn-green" id="addSurnameButton">
+                    Add surname
+                </button>
+                <button type="button" class="btn btn-green" id="addSurnameGroupButton">
+                    Add group
+                </button>
+            </div>
+            <div class="app-list" id="surnameListWrapper">
+                <h3 class="list-header">Surnames</h3>
+                <ul class="list level1" id="surnameList">
+                </ul>
+            </div>
+            <div class="app-list" id="surnameGroupListWrapper">
+                <h3 class="list-header">Surname groups</h3>
+                <ul class="list level1" id="surnameGroupList">
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="footer" id="footer">
+        <section class="footer__section">
+            <div class="footer__section_body">
+                Developer
+            </div>
+            <div class="footer__section_header">
+                Shishkin Bogdan
+            </div>
+        </section>
+    </footer>
+
+    <div id="notification" class="notification">
+        <div class="notification__body">
+            <div class="notification__body_icon" id="notificationIconDiv">
+            </div>
+            <div class="notification__body_text" id="notificationTextDiv">
+            </div>
+        </div>
+        <div class="notification__footer" id="notificationFooterDiv">
+        </div>
+    </div>
+
+    <dialog id="addSurnameGroupModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__content_header add_theme">
+                <span class="close">&times;</span>
+                <h2>Add a surname group</h2>
+            </div>
+            <div class="modal__content_body">
+                <form>
+                    <div class="form-control">
+                        <label for="surname">Group name</label>
+                        <input type="text" id="surnameGroupInput" maxlength="10" class="form-input focusable">
+                    </div>
+                </form>
+            </div>
+            <div class="modal__content_footer">
+                <div class="modal__content_footer_buttons">
+                    <button type="button" class="btn-green btn form-submit-button" id="saveSurnameGroupButton">
+                        <i class="far fa-save"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="addSurnameModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__content_header add_theme">
+                <span class="close">&times;</span>
+                <h2>Add a surname</h2>
+            </div>
+            <div class="modal__content_body">
+                <form>
+                    <div class="form-control">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surnameInput" maxlength="10" class="form-input focusable">
+                    </div>
+                </form>
+            </div>
+            <div class="modal__content_footer">
+                <div class="modal__content_footer_buttons">
+                    <button type="button" class="btn btn-green form-submit-button" id="saveSurnameButton">
+                        <i class="far fa-save"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+    </dialog>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="script/main.js"></script>
+<script src="script/modal.js"></script>
+<script src="script/notification.js"></script>
+
+</html>
